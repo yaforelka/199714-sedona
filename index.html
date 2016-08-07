@@ -5,7 +5,7 @@
     <title>Седона | Главная</title>
   </head>
   <body>
-    <div class="positioner">
+    <div class="wrapper">
       <header>
         <div class="container">
           <nav>
@@ -92,29 +92,29 @@
             <label for="arrival">Дата заезда:</label>
             <div class="date-input">
               <input type="date" name="arrival" id="arrival" value="2016-04-24">
-              <img class="date-icon" src="http://placehold.it/25x25" width="25" height="25" alt="">
+              <span class="date-icon"></span>
             </div>
 
             <label for="departure">Дата выезда:</label>
             <div class="date-input">
               <input type="date" name="departure" id="departure" value="2016-07-04">
-              <img src="http://placehold.it/25x25" width="25" height="25" alt="">
+              <span class="date-icon"></span>
             </div>
 
             <div class="half-width">
               <label for="adults">Взрослые:</label>
               <div class="number-input">
-                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                <span class="remove-icon"></span>
                 <input type="number" name="adults" min="0" step="1" value="2" id="adults">
-                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                <span class="add-icon"></span>
               </div>
             </div>
             <div class="half-width">
               <label for="children">Дети:</label>
               <div class="number-input">
-                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                <span class="icon-person"></span>
                 <input type="number" name="children" min="0" step="1" value="0" id="children">
-                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
+                <span class="icon-person"></span>
               </div>
             </div>
             <button type="submit">Найти</button>
