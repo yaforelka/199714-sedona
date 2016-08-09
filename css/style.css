@@ -6,30 +6,18 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-h1, h3.hotel-name {
+h1, h3.hotel-name, h2, h3 {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
   font-weight: bold;
-  font-family: "PT Sans", sans-serif;
 }
 
 h2 {
-  font-size: 21px;
   line-height: 21px;
-  color: #000000;
-  font-weight: bold;
-  font-family: "PT Sans", sans-serif;
-}
-
-.results h2 {
-  line-height: 26px;
 }
 
 h3 {
   font-size: 30px;
   line-height: 24px;
-  color: #000000;
-  font-weight: bold;
-  font-family: "PT Sans", sans-serif;
 }
