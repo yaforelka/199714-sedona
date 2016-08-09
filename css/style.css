@@ -1,0 +1,23 @@
+body {
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  font-weight: normal;
+  font-family: "PT Sans", sans-serif;
+}
+
+h1, h3.hotel-name, h2, h3 {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
+}
+
+h2 {
+  line-height: 21px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 24px;
+}
