@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Седона | Главная</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="header">
         <div class="container">
-          <nav>
+          <nav class="header-menu">
             <ul>
               <li>
                 <a href="#">Информация</a>
@@ -31,21 +32,22 @@
         </div>
       </header>
       <main>
-        <div class="logo"><img src="img/index/welcome-sedona.png" width="458" height="352" alt="Welcome to Sedona!">
+        <div class="logo">
+          <img src="img/index/welcome-sedona.png" width="458" height="352" alt="Welcome to Sedona!">
         </div>
         <section class="about">
           <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </section>
-        <div class="features">
-          <div class="feature-item">
+        <div class="features clearfix">
+          <div class="feature-item blue">
             <h2>Настоящий городок</h2>
             <p>- №1 -</p>
-            <p>Седона - не аттрацион для туристов, там течет своя жизнь</p>
-            <img src="img/index/sedona-town.jpg" width="66%" alt="Седона - настоящий городок">
+            <p class="feature-description">Седона - не аттрацион для туристов, там течет своя жизнь</p>
           </div>
+          <div class="feature-image"><img src="img/index/sedona-town.jpg" width="100%" alt="Седона - настоящий городок"></div>
         </div>
-        <section class="advices">
+        <section class="advices clearfix">
           <div class="advice-item">
             <b>Жилье</b>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -59,48 +61,52 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </section>
-        <div class="features">
-          <div class="feature-item">
+        <div class="features clearfix">
+          <div class="feature-image"><img src="img/index/diablo-bridge.jpg" width="100%" alt="Мост дьявола"></div>
+          <div class="feature-item blue">
             <h2>Там есть мост дьявола</h2>
             <p>- №2 -</p>
-            <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-            <img src="img/index/diablo-bridge.jpg" width="66%" alt="Мост дьявола">
-          </div>
+            <p class="feature-description">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+            </div>
         </div>
-        <div class="features">
+        <div class="features clearfix">
           <div class="feature-item">
             <h2>Небольшая площадь</h2>
             <p>- №3 -</p>
-            <p>Все достопримечательности находятся очень близко</p>
+            <p class="feature-description">Все достопримечательности находятся очень близко</p>
           </div>
           <div class="feature-item">
             <h2>Красивая дорога</h2>
             <p>- №4 -</p>
-            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="feature-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="feature-item">
             <h2>Мало туристов</h2>
             <p>- №5 -</p>
-            <p>Большинство едет в Гаранд Каньон и толпится там</p>
+            <p class="feature-description">Большинство едет в Гаранд Каньон и толпится там</p>
           </div>
         </div>
         <div class="search-hotel">
           <h3>Заинтересовались?</h3>
-          <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие
+          <p>Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие
             предложения гостиниц в Седоне</p>
-          <a href="hotels.html">Поиск гостиницы в Седоне</a>
-          <form action="https://echo.htmlacademy.ru" method="post">
+          <a class="show-hotels" href="hotels.html">Поиск гостиницы в Седоне</a>
+          <form class="dates-and-people" action="https://echo.htmlacademy.ru" method="post">
+            <div class="input-wrapper">
             <label for="arrival">Дата заезда:</label>
             <div class="date-input">
               <input type="date" name="arrival" id="arrival" value="2016-04-24">
               <span class="date-icon"></span>
             </div>
+          </div>
 
+            <div class="input-wrapper">
             <label for="departure">Дата выезда:</label>
             <div class="date-input">
               <input type="date" name="departure" id="departure" value="2016-07-04">
               <span class="date-icon"></span>
             </div>
+          </div>
 
             <div class="half-width">
               <label for="adults">Взрослые:</label>
@@ -123,20 +129,28 @@
         </div>
         <div class="map">
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d419402.4215341331!2d-111.66742309718066!3d34.79131149938631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1471178741646" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
       </main>
-      <footer>
-        <div class="footer-hashtag">#visitsedona</div>
-        <div class="footer-social">
-          <a class="social-btn social-btn-tw" href="#"></a>
-          <a class="social-btn social-btn-fb" href="#"></a>
-          <a class="social-btn social-btn-yt" href="#"></a>
-        </div>
-        <div class="footer-copyright">
-          <p>Website by</p>
-          <a class="btn" href="https://htmlacademy.ru">
-            <img src="img/logo/htmlacademy-logo.png" alt="htmlAcademy" width="113" height="39">
-          </a>
-        </div>
+      <footer class="footer clearfix">
+        <section class="footer-hashtag">
+          <div class="footer-content">#visitsedona</div>
+        </section>
+
+        <section class="footer-social">
+          <div class="footer-content">
+            <a class="social-btn social-btn-tw" href="#"></a>
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-yt" href="#"></a>
+          </div>
+        </section>
+        <section class="footer-copyright">
+          <div class="footer-content">
+            <p>Website by</p>
+            <a class="btn" href="https://htmlacademy.ru">
+              <img src="img/logo/htmlacademy-logo.png" alt="htmlAcademy" width="113" height="39">
+            </a>
+          </div>
+        </section>
       </footer>
     </div>
   </body>
