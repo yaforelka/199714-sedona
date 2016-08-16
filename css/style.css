@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   padding: 0;
   background-color: #f2f2f2;
   text-transform: uppercase;
@@ -7,10 +6,10 @@ body {
   line-height: 26px;
   color: #333333;
   font-weight: normal;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
-h1, h3.hotel-name, h2, h3 {
+h1, h3.hotel-name, h2, .results-info h2, h3 {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -26,51 +25,48 @@ h3 {
   line-height: 24px;
 }
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 .wrapper {
   max-width: 1200px;
   min-width: 768px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff;
-  outline: 1px solid black;
 }
 
-header {
-  outline: 1px solid blue;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 header .container, .user-search .container, .results .container {
-  outline: 1px solid green;
-  width: 88%;
-  margin: 0 auto;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .user-search {
-  padding-top: 1px;
+  padding-top: 27px;
+  padding-bottom: 33px;
   background: url("../img/hotels/background-hotels-1200.jpg") no-repeat 0 -50px;
   background-size: 100%;
   line-height: 21px;
   color: #ffffff;
 }
 
-.form-wrapper {
-  width: 66.67%;
-  width: calc(100%/3*2);
-  float: left;
-  outline: 1px solid red;
-}
-
 .user-search fieldset {
   border: none;
   padding: 0;
-  margin: 0;
-  min-height: 217px;
+  margin-left: 0;
   outline: 1px solid black;
 }
 
 .user-search legend {
   font-weight: bold;
-  margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .user-search .hotels-infrastructure {
@@ -84,19 +80,20 @@ header .container, .user-search .container, .results .container {
   float: left;
 }
 
+.hotels-type-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .user-search .hotels-price {
-  width: 33.33%;
-  width: calc(100%/3);
-  float: left;
+  width: 30.11%;
+  float: right;
 }
 
 .price-controls {
-  width: 90.5%;
   min-width: 224px;
-  box-sizing: border-box;
-  float: right;
   border: 2px solid white;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .price-controls input {
@@ -108,8 +105,7 @@ header .container, .user-search .container, .results .container {
 
 .hotels-price button {
   display: block;
-  min-width: 123px;
-  padding: 5px;
+  padding: 5px 35px;
   border: 2px solid white;
   margin-left: auto;
   margin-right: auto;
@@ -120,90 +116,81 @@ header .container, .user-search .container, .results .container {
   background: none;
 }
 
-.range-controls{
+.range-controls {
   position: relative;
-  float: right;
-  width: 90.5%;
   min-width: 220px;
   height: 30px;
   margin-bottom: 19px;
   outline: 1px solid red;
-  border-radius: 5px;
   overflow: hidden;
 }
 
-.scale{
-    margin-top: 14px;
-    height: 2px;
-    background: #ffffff;
+.scale {
+  margin-top: 14px;
+  height: 2px;
+  background: #ffffff;
 }
 
-.strip{
+.strip {
   height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.toggle{
+.toggle {
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 30px;
-  width: 4px;
-  height: 4px;
-  border: 8px solid white;
+  width: 22px;
+  height: 22px;
+  border: 9px solid white;
   background: #ababab;
   cursor: pointer;
   border-radius: 50%;
 }
 
-.min-toggle{
+.min-toggle {
   left: 0;
 }
-.max-toggle{
+
+.max-toggle {
   left: 165px;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .results-info {
-  padding-top: 1px;
-  outline: 1px solid blue;
+  padding-top: 29px;
+  padding-bottom: 29px;
   font-size: 12px;
   line-height: 18px;
-  border: 1px solid #e5e5e5;
-}
-
-.results-info h2, .results-info p, .results-info ul {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0;
-  margin: 0;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  outline: 1px solid green;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .results-info h2 {
-  margin-right: 45px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 50px;
+  float: left;
 }
 
 .results-info p {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 0;
   margin-right: 40px;
 }
 
 .filters {
+  float: left;
+  margin-top: 5px;
+  padding-left: 0;
+  list-style: none;
   font-size: 0;
 }
 
 .filters li {
-  margin-right: 30px;
   display: inline-block;
-  font-size: 12px;
   vertical-align: middle;
-  outline: 1px solid red;
+  margin-right: 30px;
+  font-size: 12px;
 }
 
 .filters li:last-child {
@@ -215,9 +202,18 @@ header .container, .user-search .container, .results .container {
   color: #81b3d2;
 }
 
+.sort-controls {
+  float: right;
+  min-width: 40px;
+  min-height: 20px;
+  margin-top: 5px;
+  background-color: #81b3d2;
+}
+
 .hotel-item {
+  padding-top: 30px;
+  padding-bottom: 22px;
   border-bottom:  1px solid #e5e5e5;
-  padding-top: 1px;
 }
 
 .hotel-about {
@@ -225,14 +221,12 @@ header .container, .user-search .container, .results .container {
   width: 66.67%;
   width: calc(100%/3*2);
   padding-top: 1px;
-  margin-bottom: 22px;
 }
 
 .hotel-about .hotel-photo {
   min-width: 135px;
   float: left;
   margin-right: 30px;
-  margin-top: 28px;
 }
 
 .hotel-description {
@@ -240,7 +234,7 @@ header .container, .user-search .container, .results .container {
 }
 
 .hotel-name {
-  margin-top: 23px;
+  margin-top: -5px;
   margin-bottom: 4px;
 }
 
@@ -254,18 +248,18 @@ header .container, .user-search .container, .results .container {
   margin-right: 7px;
 }
 
-.hotel-wrapper p {
-  margin: 0;
-}
-
 .hotel-wrapper:last-child {
   margin-right: 0;
+}
+
+.hotel-wrapper p {
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .hotel-info, .hotel-book {
   display: inline-block;
   vertical-align: bottom;
-  margin-top: 12px;
   padding: 3px 15px;
   color: #ffffff;
   font-weight: bold;
@@ -281,63 +275,79 @@ header .container, .user-search .container, .results .container {
   background-color: #766357;
 }
 
+.hotel-rate {
+  float: right;
+  width: 33.33%;
+  width: calc(100%/3);
+  text-align: right;
+}
+
+.hotel-stars {
+  display: block;
+  width:40px;
+  height:21px;
+  background-color: #81b3d2;
+  margin-bottom: 44px;
+}
+
+.hotel-rate p {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #f2f2f2;
+  color: #666666;
+}
+
 .header-menu ul {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 
 .header-menu li {
   display: inline-block;
-}
-
-main {
-  outline: 1px solid red;
+  vertical-align: middle;
 }
 
 .logo {
-  width: 100%;
   min-height: 509px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 75px;
   background: url("../img/index/mask.png") no-repeat 0 100%,
-             url("../img/index/background-sedona-1200.jpg") no-repeat 0 -50px;
-  outline: 1px solid blue;
-  background-size: 100%;
+              url("../img/index/background-sedona-1200.jpg") no-repeat 50% 21%;
+  background-size: 100% 57px, auto;
 }
 
 .logo img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 74px;
-  outline: 1px solid black;
 }
 
 .about {
-  padding-top: 1px;
+  padding-top: 60px;
+  padding-bottom: 37px;
   text-align: center;
   background-color: white;
 }
 
 .about h1 {
   width: 500px;
-  margin-top: 60px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  background-color: rgba(0, 0, 255, 0.5);
+  margin-bottom: 27px;
 }
 
 .about p {
-  margin: 0;
-  display: block;
-  padding-bottom: 55px;
+  margin-top: 0;
 }
 
 .features {
   height: 256px;
-  outline: 1px solid blue;
   overflow: hidden;
 }
 
@@ -346,23 +356,24 @@ main {
   width: 33.33%;
   width:calc(100% / 3);
   min-height: 256px;
+  padding-top: 48px;
   text-align: center;
   background-color: #eeeeee;
   color: #000000;
-  outline: 1px solid green;
 }
 
-.features .blue {
+.feature-item.blue {
   color: #ffffff;
+  padding-top: 54px;
   background-color: #81b3d2;
 }
 
 .feature-item h2 {
   max-width: 151px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 }
 
 .blue h2 {
@@ -372,20 +383,29 @@ main {
 .feature-item .feature-description {
   display: block;
   width: 71%;
-  margin: 0 auto;
-  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-image {
   width:66.67%;
   width: calc(100%/3*2);
+  height: 256px;
   float: left;
 }
 
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
 
 .advices {
   text-align: center;
-  outline: 1px solid red;
 }
 
 .advice-item {
@@ -393,13 +413,12 @@ main {
   min-height: 330px;
   width: 33.33%;
   width: calc(100% / 3);
-  outline: 1px solid black;
+  padding-top: 161px;
   background: #ffffff url("../img/index/advances-food.png") no-repeat 50% 62px;
 }
 
 .advice-item b {
   display: block;
-  margin-top: 161px;
   margin-bottom: 23px;
   font-size: 21px;
   line-height: 21px;
@@ -409,7 +428,9 @@ main {
 .advice-item p {
   display: block;
   width: 72%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
   line-height: 21px;
 }
 
@@ -423,28 +444,29 @@ main {
 }
 
 .search-hotel {
-  padding-top: 1px;
+  padding-top: 55px;
   text-align: center;
 }
 
 .search-hotel h3 {
-  margin-top: 54px;
+  margin-top: 0;
+  margin-bottom: 28px;
 }
 
 .search-hotel p {
   display: block;
-  max-width: 440px;
+  width: 440px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 55px;
 }
 
 .show-hotels {
   display: block;
   max-width: 568px;
   padding: 30px 10px;
-  margin: 0 auto;
-  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 46px;
   text-decoration: none;
   font-size: 21px;
   font-weight: bold;
@@ -454,8 +476,8 @@ main {
 
 .dates-and-people {
   width: 568px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 55px;
+  padding-bottom: 55px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -476,9 +498,6 @@ main {
   padding: 5px 15px;
 }
 
-.input-wrapper:first-child {
-  margin-top: 53px;
-}
 
 .dates-and-people label, .date-input, .number-input {
   display: inline-block;
@@ -494,7 +513,6 @@ main {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 54px;
-  outline: 1px solid green;
 }
 
 .half-width input {
@@ -509,7 +527,6 @@ main {
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 55px;
   text-transform: uppercase;
   font-size: 21px;
   line-height: 26px;
@@ -518,24 +535,29 @@ main {
   border: none;
 }
 
+.map {
+  min-height: 748px;
+  background: lightgreen url("../img/index/map.jpg");
+}
 
 .footer {
-  outline: 1px solid blue;
+  min-height: 120px;
+  padding-top: 35px;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer.index {
+  margin-top: -120px;
 }
 
 .footer section {
   float: left;
   width: 33.33%;
   width: calc(100% / 3);
-  min-height: 120px;
-  outline: 1px solid red;
 }
 
 .footer-content {
-  outline: 1px solid black;
   text-align: center;
-  margin-top: 35px;
   font-size: 0;
 }
 
@@ -548,12 +570,12 @@ main {
 }
 
 .social-btn {
-  font-size: 14px;
   display: inline-block;
-  margin-right: 6px;
-  vertical-align: top;
   min-width: 48px;
   min-height: 48px;
+  margin-right: 6px;
+  font-size: 14px;
+  vertical-align: top;
   background-color: #81b3d2;
 }
 
@@ -562,17 +584,15 @@ main {
 }
 
 .footer-content p {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  margin-right: 8px;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 14px;
+  line-height: 21px;
 }
 
 .btn {
   display: inline-block;
-  line-height: 0;
-  margin-top: 5px;
-  margin-bottom: 4px;
   vertical-align: middle;
+  margin-top: 3px;
 }

@@ -32,21 +32,23 @@
         </div>
       </header>
       <main>
-        <div class="logo">
+        <section class="logo">
           <img src="img/index/welcome-sedona.png" width="458" height="352" alt="Welcome to Sedona!">
-        </div>
+        </section>
         <section class="about">
           <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </section>
-        <div class="features clearfix">
+        <section class="features clearfix">
           <div class="feature-item blue">
             <h2>Настоящий городок</h2>
             <p>- №1 -</p>
             <p class="feature-description">Седона - не аттрацион для туристов, там течет своя жизнь</p>
           </div>
-          <div class="feature-image"><img src="img/index/sedona-town.jpg" width="100%" alt="Седона - настоящий городок"></div>
-        </div>
+          <div class="feature-image">
+            <img src="img/index/sedona-town.jpg" width="800" height="401" alt="Седона - настоящий городок">
+          </div>
+        </section>
         <section class="advices clearfix">
           <div class="advice-item">
             <b>Жилье</b>
@@ -61,15 +63,17 @@
             <p>Не только китайского, но и местного производства!</p>
           </div>
         </section>
-        <div class="features clearfix">
-          <div class="feature-image"><img src="img/index/diablo-bridge.jpg" width="100%" alt="Мост дьявола"></div>
+        <section class="features clearfix">
+          <div class="feature-image">
+            <img src="img/index/diablo-bridge.jpg" width="800" height="400" alt="Мост дьявола">
+          </div>
           <div class="feature-item blue">
             <h2>Там есть мост дьявола</h2>
             <p>- №2 -</p>
             <p class="feature-description">Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-            </div>
-        </div>
-        <div class="features clearfix">
+          </div>
+        </section>
+        <section class="features clearfix">
           <div class="feature-item">
             <h2>Небольшая площадь</h2>
             <p>- №3 -</p>
@@ -85,7 +89,7 @@
             <p>- №5 -</p>
             <p class="feature-description">Большинство едет в Гаранд Каньон и толпится там</p>
           </div>
-        </div>
+        </section>
         <div class="search-hotel">
           <h3>Заинтересовались?</h3>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем Вам лучшие
@@ -93,45 +97,45 @@
           <a class="show-hotels" href="hotels.html">Поиск гостиницы в Седоне</a>
           <form class="dates-and-people" action="https://echo.htmlacademy.ru" method="post">
             <div class="input-wrapper">
-            <label for="arrival">Дата заезда:</label>
-            <div class="date-input">
-              <input type="date" name="arrival" id="arrival" value="2016-04-24">
-              <span class="date-icon"></span>
+              <label for="arrival">Дата заезда:</label>
+              <div class="date-input">
+                <input type="text" name="arrival" id="arrival" value="24 апреля 2016">
+                <span class="date-icon"></span>
+              </div>
             </div>
-          </div>
 
             <div class="input-wrapper">
-            <label for="departure">Дата выезда:</label>
-            <div class="date-input">
-              <input type="date" name="departure" id="departure" value="2016-07-04">
-              <span class="date-icon"></span>
+              <label for="departure">Дата выезда:</label>
+              <div class="date-input">
+                <input type="text" name="departure" id="departure" value="24 июля 2016">
+                <span class="date-icon"></span>
+              </div>
             </div>
-          </div>
 
             <div class="half-width">
               <label for="adults">Взрослые:</label>
               <div class="number-input">
                 <span class="remove-icon"></span>
-                <input type="number" name="adults" min="0" step="1" value="2" id="adults">
+                <input type="text" name="adults" min="0" step="1" value="2" id="adults">
                 <span class="add-icon"></span>
               </div>
             </div>
+
             <div class="half-width">
               <label for="children">Дети:</label>
               <div class="number-input">
                 <span class="icon-person"></span>
-                <input type="number" name="children" min="0" step="1" value="0" id="children">
+                <input type="text" name="children" min="0" step="1" value="0" id="children">
                 <span class="icon-person"></span>
               </div>
             </div>
             <button type="submit">Найти</button>
           </form>
         </div>
-        <div class="map">
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d419402.4215341331!2d-111.66742309718066!3d34.79131149938631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1471178741646" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <section class="map">
+        </section>
       </main>
-      <footer class="footer clearfix">
+      <footer class="footer index clearfix">
         <section class="footer-hashtag">
           <div class="footer-content">#visitsedona</div>
         </section>
@@ -143,12 +147,14 @@
             <a class="social-btn social-btn-yt" href="#"></a>
           </div>
         </section>
+
         <section class="footer-copyright">
           <div class="footer-content">
-            <p>Website by</p>
-            <a class="btn" href="https://htmlacademy.ru">
-              <img src="img/logo/htmlacademy-logo.png" alt="htmlAcademy" width="113" height="39">
-            </a>
+            <p>Website by
+              <a class="btn" href="https://htmlacademy.ru">
+                <img src="img/logo/htmlacademy-logo.png" alt="htmlAcademy" width="113" height="39">
+              </a>
+            </p>
           </div>
         </section>
       </footer>
