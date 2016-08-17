@@ -61,6 +61,7 @@ header .container, .user-search .container, .results .container {
   border: none;
   padding: 0;
   margin-left: 0;
+  margin-right: 0;
   outline: 1px solid black;
 }
 
@@ -91,7 +92,6 @@ header .container, .user-search .container, .results .container {
 }
 
 .price-controls {
-  min-width: 224px;
   border: 2px solid white;
   margin-bottom: 15px;
 }
@@ -284,8 +284,8 @@ header .container, .user-search .container, .results .container {
 
 .hotel-stars {
   display: block;
-  width:40px;
-  height:21px;
+  width: 40px;
+  height: 21px;
   background-color: #81b3d2;
   margin-bottom: 44px;
 }
@@ -476,26 +476,35 @@ header .container, .user-search .container, .results .container {
 
 .dates-and-people {
   width: 568px;
-  padding-top: 55px;
+  padding: 55px;
   padding-bottom: 55px;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   font-weight: bold;
+  font-size: 0;
   color: #000000;
-  outline: 1px solid blue;
 }
 
 .input-wrapper {
-  outline: 1px solid red;
   margin-bottom: 29px;
+  font-size: 0;
 }
 
-.date-input input {
+.input-wrapper label {
+  width:24.5%;
+  text-align: left;
+}
+
+.date-input {
+  width: 75.5%;
+}
+
+.date-input input, .number-input input {
+  width: 100%;
   border: none;
-  width: 316px;
   background-color: #f2f2f2;
-  padding: 5px 15px;
+  padding: 6px 15px;
+  font-size: 14px;
 }
 
 
@@ -505,28 +514,44 @@ header .container, .user-search .container, .results .container {
 }
 
 .dates-and-people label  {
-  margin-right: 15px;
+    font-size: 14px;
 }
 
 .half-width {
-  width: 231px;
+  width: 50%;
   display: inline-block;
-  vertical-align: top;
-  margin-bottom: 54px;
+  margin-bottom: 29px;
+  vertical-align: middle;
+  font-size: 0px;
+}
+
+.number-input {
+  width: 50%;
 }
 
 .half-width input {
   border: none;
-  width: 115px;
+  width: 100%;
+  font-size: 14px;
   background-color: #f2f2f2;
+}
+
+.half-width label {
+  width: 50%;
+  text-align: left;
+}
+
+label[for="children"] {
+  padding-right: 27px;
+  text-align: right;
 }
 
 .dates-and-people button {
   display: block;
-  width: 81%;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 25px;
   text-transform: uppercase;
   font-size: 21px;
   line-height: 26px;
