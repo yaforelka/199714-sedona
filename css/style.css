@@ -306,19 +306,44 @@ header .container, .user-search .container, .results .container {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
 }
 
-.header-menu li {
+.header-menu li:not(.menu-logo) {
   display: inline-block;
+  width: 25%;
+  padding: 15px 0;
   vertical-align: middle;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.header-menu li:nth-child(4),
+.header-menu li:last-child {
+  text-align: right;
+}
+
+.menu-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.header-menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
 }
 
 .logo {
   min-height: 509px;
   padding-top: 75px;
   background: url("../img/index/mask.png") no-repeat 0 100%,
-              url("../img/index/background-sedona-1200.jpg") no-repeat 50% 21%;
-  background-size: 100% 57px, auto;
+              url("../img/index/background-sedona-1200.jpg") no-repeat 0 21%;
+  background-size: 100% auto, auto;
 }
 
 .logo img {
@@ -359,12 +384,13 @@ header .container, .user-search .container, .results .container {
   padding-top: 48px;
   text-align: center;
   background-color: #eeeeee;
+  line-height: 21px;
   color: #000000;
 }
 
 .feature-item.blue {
   color: #ffffff;
-  padding-top: 54px;
+  padding-top: 50px;
   background-color: #81b3d2;
 }
 
@@ -383,6 +409,7 @@ header .container, .user-search .container, .results .container {
 .feature-item .feature-description {
   display: block;
   width: 71%;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -549,8 +576,8 @@ label[for="children"] {
 .dates-and-people button {
   display: block;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-top: 25px;
   text-transform: uppercase;
   font-size: 21px;
