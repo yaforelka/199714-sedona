@@ -313,7 +313,7 @@ header .container, .user-search .container, .results .container {
 
 .header-menu li:not(.menu-logo) {
   display: inline-block;
-  width: 25%;
+  width: 22.8%;
   padding: 15px 0;
   vertical-align: middle;
   font-size: 14px;
@@ -322,6 +322,7 @@ header .container, .user-search .container, .results .container {
 
 .header-menu li:nth-child(4),
 .header-menu li:last-child {
+  float:right;
   text-align: right;
 }
 
