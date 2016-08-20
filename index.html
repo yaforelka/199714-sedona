@@ -11,7 +11,7 @@
       <header class="header">
         <div class="container">
           <nav class="header-menu">
-            <ul>
+            <ul class="clearfix">
               <li>
                 <a href="#">Информация</a>
               </li>
@@ -22,10 +22,10 @@
                 <a><img src="img/logo/header-logo.png" width="138" height="70" alt="Логотип City Of Sedona"></a>
               </li>
               <li>
-                <a href="#">Карта штата</a>
+                <a href="hotels.html">Гостиницы</a>
               </li>
               <li>
-                <a href="hotels.html">Гостиницы</a>
+                <a href="#">Карта штата</a>
               </li>
             </ul>
           </nav>
@@ -100,7 +100,7 @@
               <label for="arrival">Дата заезда:</label>
               <div class="date-input">
                 <input type="text" name="arrival" id="arrival" value="24 апреля 2016">
-                <span class="date-icon"></span>
+                <span class="icon-calendar"></span>
               </div>
             </div>
 
@@ -108,28 +108,28 @@
               <label for="departure">Дата выезда:</label>
               <div class="date-input">
                 <input type="text" name="departure" id="departure" value="24 июля 2016">
-                <span class="date-icon"></span>
+                <span class="icon-calendar"></span>
               </div>
             </div>
 
             <div class="half-width">
               <label for="adults">Взрослые:</label>
               <div class="number-input">
-                <span class="remove-icon"></span>
-                <input type="text" name="adults" min="0" step="1" value="2" id="adults">
-                <span class="add-icon"></span>
+                <span class="icon-minus"></span>
+                <input type="text" name="adults" value="2" id="adults">
+                <span class="icon-plus"></span>
               </div>
             </div>
 
             <div class="half-width">
               <label for="children">Дети:</label>
               <div class="number-input">
-                <span class="icon-person"></span>
-                <input type="text" name="children" min="0" step="1" value="0" id="children">
-                <span class="icon-person"></span>
+                <span class="icon-minus"></span>
+                <input type="text" name="children" value="0" id="children">
+                <span class="icon-plus"></span>
               </div>
             </div>
-            <button type="submit">Найти</button>
+            <button class="blue-btn" type="submit">Найти</button>
           </form>
         </div>
         <section class="map">
@@ -142,18 +142,16 @@
 
         <section class="footer-social">
           <div class="footer-content">
-            <a class="social-btn social-btn-tw" href="#"></a>
-            <a class="social-btn social-btn-fb" href="#"></a>
-            <a class="social-btn social-btn-yt" href="#"></a>
+            <a class="social-btn icon-twitter" href="#"></a>
+            <a class="social-btn icon-facebook" href="#"></a>
+            <a class="social-btn icon-youtube" href="#"></a>
           </div>
         </section>
 
         <section class="footer-copyright">
           <div class="footer-content">
             <p>Website by
-              <a class="btn" href="https://htmlacademy.ru">
-                <img src="img/logo/htmlacademy-logo.png" alt="htmlAcademy" width="113" height="39">
-              </a>
+              <a class="btn" href="https://htmlacademy.ru"></a>
             </p>
           </div>
         </section>
