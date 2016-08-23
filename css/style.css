@@ -236,17 +236,26 @@ input:disabled + label, input:disabled + label:hover {
   padding-top: 6px;
   padding-bottom: 5px;
   margin-bottom: 7px;
+  position: relative;
   border-radius: 3px;
   font-size: 0;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
 }
 
 .range-filter {
   font-size: 0;
 }
 
-.price-controls .half-width-price:first-child {
-  border-right: 2px solid white;
-}
 
 .half-width-price {
   width: 50%;
@@ -260,11 +269,13 @@ input:disabled + label, input:disabled + label:hover {
   vertical-align: top;
   width: 50%;
   text-align: right;
+  cursor: pointer;
 }
 
 .price-controls input {
   display: inline-block;
   padding-left: 5px;
+  padding-right: 5px;
   vertical-align: top;
   padding-top: 0;
   padding-bottom: 0;
@@ -274,9 +285,8 @@ input:disabled + label, input:disabled + label:hover {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
+  outline: none;
 }
-
-
 
 .hotels-price button {
   display: block;
@@ -519,27 +529,35 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .hotel-stars {
-  margin-bottom: 41px;
-  margin-top: -6px;
-}
-
-.icon-star {
+  margin-bottom: 63px;
   color: #81b3d2;
   font-size: 20px;
-  margin-right: 2px;
+  position: relative;
 }
 
-.icon-star:last-child {
-  margin-right: 0;
-}
-
-.hotel-item .icon-star::before {
-  content: "\2605";
+.icon-star-four::before {
+  content: "\2605   \2605   \2605   \2605";
   width: auto;
-  margin-left: 0;
-  margin-right: 0;
+  position: absolute;
+  right: -4px;
+  top: -3px;
 }
 
+.icon-star-two::before {
+  content: "\2605   \2605";
+  width: auto;
+  position: absolute;
+  right: -4px;
+  top: -3px;
+}
+
+.icon-star-three::before {
+  content: "\2605   \2605   \2605";
+  width: auto;
+  position: absolute;
+  right: -4px;
+  top: -3px;
+}
 
 .hotel-rate p {
   display: inline-block;
@@ -744,7 +762,7 @@ input:disabled + label, input:disabled + label:hover {
   width: calc(100% / 3);
   font-size: 14px;
   padding-top: 161px;
-  background: #ffffff url("../img/index/advances-food.png") no-repeat 50% 61px;
+  position: relative;
 }
 
 .advice-item b {
@@ -761,13 +779,37 @@ input:disabled + label, input:disabled + label:hover {
   line-height: 21px;
 }
 
-.advice-item.hotel {
-  background: #ffffff url("../img/index/advances-home.png") no-repeat 50% 60px;
+.advice-item.hotel::before {
+  content: "";
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -128px -17px;
 }
 
-.advice-item.gift {
-  margin-right: 0;
-  background: #ffffff url("../img/index/advances-gift.png") no-repeat 50% 58px;
+.advice-item.food::before {
+  content: "";
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -532px -17px;
+}
+
+.advice-item.gift::before {
+  content: "";
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -1005px -12px;
 }
 
 .search-hotel {
