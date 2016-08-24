@@ -188,6 +188,7 @@ input[type="checkbox"] {
   padding-left: 40px;
   cursor: pointer;
   float: left;
+  width: 135px;
 }
 
 .list-element label::before {
@@ -270,6 +271,7 @@ input:disabled + label, input:disabled + label:hover {
   width: 50%;
   text-align: right;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .price-controls input {
@@ -286,6 +288,7 @@ input:disabled + label, input:disabled + label:hover {
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
+  cursor: pointer;
 }
 
 .hotels-price button {
@@ -337,6 +340,7 @@ input:disabled + label, input:disabled + label:hover {
   background: #ababab;
   cursor: pointer;
   border-radius: 50%;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
 }
 
 .toggle:hover {
@@ -377,6 +381,7 @@ input:disabled + label, input:disabled + label:hover {
   margin-top: 6px;
   margin-bottom: 0;
   margin-right: 15px;
+  word-break: break-all;
 }
 
 .filters {
@@ -405,10 +410,6 @@ input:disabled + label, input:disabled + label:hover {
   border-bottom: 1px dotted #81b3d2;
 }
 
-.active a {
-  color: #81b3d2;
-  border-bottom: none;
-}
 
 .filters a:hover {
   color: #81b3d2;
@@ -416,6 +417,11 @@ input:disabled + label, input:disabled + label:hover {
 
 .filters a:active {
   color: #000000;
+  border-bottom: none;
+}
+
+.active a, .active a:active {
+  color: #81b3d2;
   border-bottom: none;
 }
 
@@ -447,7 +453,7 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .hotel-item {
-  padding-top: 30px;
+  padding-top: 31px;
   padding-bottom: 29px;
   border-bottom:  1px solid #e5e5e5;
 }
@@ -456,11 +462,10 @@ input:disabled + label, input:disabled + label:hover {
   float:left;
   width: 66.67%;
   width: calc(100%/3*2);
-  padding-top: 1px;
 }
 
 .hotel-about .hotel-photo {
-  min-width: 135px;
+  width: 135px;
   float: left;
   margin-right: 30px;
   line-height: 0;
@@ -529,7 +534,7 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .hotel-stars {
-  margin-bottom: 63px;
+  margin-bottom: 62px;
   color: #81b3d2;
   font-size: 20px;
   position: relative;
@@ -539,8 +544,8 @@ input:disabled + label, input:disabled + label:hover {
   content: "\2605   \2605   \2605   \2605";
   width: auto;
   position: absolute;
-  right: -4px;
-  top: -3px;
+  right: -3px;
+  top: -4px;
 }
 
 .icon-star-two::before {
@@ -648,6 +653,8 @@ input:disabled + label, input:disabled + label:hover {
 
 .logo img {
   display: block;
+  width: 458px;
+  height: 352px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1011,6 +1018,7 @@ input:disabled + label, input:disabled + label:hover {
   height: 48px;
   padding-top: 14px;
   margin-right: 6px;
+  margin-bottom: 6px;
   font-size: 19px;
   line-height: 20px;
   text-decoration: none;
