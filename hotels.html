@@ -19,13 +19,13 @@
                 <a href="#">Фото и видео</a>
               </li>
               <li class="menu-logo">
-                <a href="index.html"><img src="img/logo/header-logo.png" width="138" height="70" alt="Логотип City Of Sedona"></a>
+                <a href="index.html"><img src="img/header-logo.png" width="138" height="70" alt="Логотип City Of Sedona"></a>
               </li>
-              <li>
+              <li class="menu-right">
                 <a href="#">Карта штата</a>
               </li>
-              <li class="active-list">
-                <a>Гостиницы</a>
+              <li class="menu-right active-list">
+                <a href="hotels.html">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -71,26 +71,33 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="hotels-price">
-                <legend>Стоимость в сутки (P):</legend>
-                <div class="range-filter">
-                  <div class="price-controls">
-                    <div class="half-width-price">
-                    <label class="price-controls-label" for="min-price">От</label>
-                    <input class="min-price" id="min-price" name="min-price" type="text" value="0">
+              <fieldset class="hotels-price clearfix">
+                <div class="fieldset-right clearfix">
+                  <legend>Стоимость в сутки (P):</legend>
+                  <div class="content-right">
+                    <div class="price-controls">
+                      <div class="half-width-price">
+                        <label class="min-price" for="min-price">От</label>
+                        <input type="text" name="min-price" id="min-price" value="0">
+                      </div>
+
+                      <div class="half-width-price">
+                        <label class="max-price" for="max-price">До</label>
+                        <input type="text" name="max-price" id="max-price" value="3000">
+                      </div>
+                    </div>
+
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar"></div>
+                      </div>
+                      <div class="range-toggle range-toggle-min"></div>
+                      <div class="range-toggle range-toggle-max"></div>
+                    </div>
+
                   </div>
-                  <div class="half-width-price">
-                    <label class="price-controls-label" for="max-price">До</label>
-                    <input class="max-price" id="max-price" name="max-price" type="text" value="3000">
-                  </div>
-                  </div>
-                  <div class="range-controls">
-                    <div class="scale"><div class="strip"></div></div>
-                    <div class="toggle min-toggle"></div>
-                    <div class="toggle max-toggle"></div>
-                  </div>
+                  <button class="btn-transparent" type="submit">Показать</button>
                 </div>
-                <button type="submit">Показать</button>
               </fieldset>
             </form>
           </div>
@@ -121,10 +128,8 @@
                   <h3 class="hotel-name"><a href="#">Amara Resort &amp; SPA</a></h3>
                   <div class="hotel-wrapper">
                     <p class="hotel-type">Гостиница</p>
-                    <a class="blue-btn hotel-info" href="#">Подробнее</a>
-                  </div>
-                  <div class="hotel-wrapper">
                     <p class="hotel-price">От 3500 p.</p>
+                    <a class="blue-btn hotel-info" href="#">Подробнее</a>
                     <a class="brown-btn hotel-book" href="#">Забронировать</a>
                   </div>
                 </div>
@@ -145,14 +150,13 @@
                   <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
                   <div class="hotel-wrapper">
                     <p class="hotel-type">Мотель</p>
-                    <a class="blue-btn hotel-info" href="#">Подробнее</a>
-                  </div>
-                  <div class="hotel-wrapper">
                     <p class="hotel-price">От 2000 р.</p>
+                    <a class="blue-btn hotel-info" href="#">Подробнее</a>
                     <a class="brown-btn hotel-book" href="#">Забронировать</a>
                   </div>
                 </div>
               </div>
+
               <div class="hotel-rate">
                 <div class="hotel-stars icon-star-two"></div>
                 <p class="hotel-rating">Рейтинг: 8,9</p>
@@ -169,10 +173,8 @@
                   <h3 class="hotel-name"><a href="">Villas At Poco Diablo</a></h3>
                   <div class="hotel-wrapper">
                     <p class="hotel-type">Апартаменты</p>
-                    <a class="blue-btn hotel-info">Подробнее</a>
-                  </div>
-                  <div class="hotel-wrapper">
                     <p class="hotel-price">От 4000 р.</p>
+                    <a class="blue-btn hotel-info">Подробнее</a>
                     <a class="brown-btn hotel-book">Забронировать</a>
                   </div>
                 </div>

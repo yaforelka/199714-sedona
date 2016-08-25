@@ -135,7 +135,7 @@ h3 {
 .user-search {
   padding-top: 27px;
   min-height: 217px;
-  background: #414e54 url("../img/hotels/background-hotels-1200.jpg") no-repeat 0 -50px;
+  background: #414e54 url("../img/sedona-backgrounds/background-hotels.jpg") no-repeat 0 -50px;
   background-size: 100%;
   line-height: 21px;
   color: #ffffff;
@@ -160,9 +160,9 @@ h3 {
 }
 
 .user-search .hotels-infrastructure {
-  width: 140px;
+  width: 14.8%;
   float: left;
-  margin-right: 116px;
+  margin-right: 101px;
 }
 
 .icon-check-label {
@@ -214,7 +214,7 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .user-search .hotels-type {
-  width: 140px;
+  width: 14.8%;
   float: left;
 }
 
@@ -224,8 +224,21 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .user-search .hotels-price {
-  width: 30.11%;
+  width: 33.33%;
+  width: calc(100%/3);
   float: right;
+}
+
+.content-right {
+  float: right;
+  width: 96.06%;
+  min-width: 224px;
+}
+
+.fieldset-right {
+  float: right;
+  min-width: 224px;
+  width: 93.75%;
 }
 
 .hotels-price legend {
@@ -233,128 +246,132 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .price-controls {
-  border: 2px solid white;
-  padding-top: 6px;
-  padding-bottom: 5px;
-  margin-bottom: 7px;
   position: relative;
+  margin-bottom: 21px;
+  font-size: 0;
+  border: 2px solid #ffffff;
   border-radius: 3px;
-  font-size: 0;
 }
-
-.price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 22px;
-  background: #ffffff;
-  transform: translate(-50%, -50%);
-}
-
-.range-filter {
-  font-size: 0;
-}
-
 
 .half-width-price {
   width: 50%;
+  padding: 5px 0;
   display: inline-block;
   vertical-align: top;
+  font-size: 0px;
 }
 
-.price-controls-label {
+.price-controls label {
   display: inline-block;
-  font-size: 14px;
   vertical-align: top;
-  width: 50%;
+  padding-right: 5px;
+  font-size: 14px;
+  line-height: 21px;
   text-align: right;
   cursor: pointer;
   word-break: break-all;
 }
 
+.price-controls .min-price {
+  width: 55%;
+}
+
+.min-price + input {
+  border: none;
+  width: 45%;
+  border-right: 2px solid white;
+}
+
+.price-controls .max-price {
+  width: 49%;
+}
+
+.max-price + input {
+  border: none;
+  width: 51%;
+}
+
 .price-controls input {
   display: inline-block;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
+  margin: 0;
   padding-top: 0;
+  padding-right: 10px;
   padding-bottom: 0;
-  width: 50%;
-  border: none;
+  color: inherit;
+  font: inherit;
+  vertical-align: middle;
   background: none;
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
   outline: none;
-  cursor: pointer;
-}
-
-.hotels-price button {
-  display: block;
-  padding: 6px 35px 5px;
-  border: 2px solid white;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 3px;
-  line-height: 21px;
   font-size: 14px;
-  color: #ffffff;
-  text-transform: uppercase;
-  background: none;
-  cursor: pointer;
-}
-
-.hotels-price button:hover {
-  background-color: #ffffff;
-  color: #000000;
 }
 
 .range-controls {
   position: relative;
-  min-width: 220px;
-  height: 30px;
-  margin-bottom: 17px;
-  overflow: hidden;
+  min-width: 215px;
+  margin-bottom: 32px;
 }
 
-.scale {
-  margin-top: 13px;
+.range-controls .scale {
   height: 2px;
-  background: #ffffff;
-}
 
-.strip {
-  height: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.toggle {
-  position: absolute;
-  top: 4px;
-  left: 30px;
-  width: 21px;
-  height: 21px;
-  border: 9px solid white;
-  background: #ababab;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
 }
 
-.toggle:hover {
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
   background: #1c4f80;
 }
 
-.min-toggle {
+.range-toggle-min {
   left: 0;
 }
 
-.max-toggle {
-  left: 252px;
+.range-toggle-max {
+  left: 80%;
 }
 
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
 .results-info {
   padding-top: 31px;
   padding-bottom: 29px;
@@ -366,8 +383,8 @@ input:disabled + label, input:disabled + label:hover {
 .results-info h2 {
   margin-top: 0;
   margin-bottom: 0;
-  margin-right: 29px;
-  width: 135px;
+  margin-right: 6px;
+  width: 158px;
   float: left;
 }
 
@@ -460,8 +477,7 @@ input:disabled + label, input:disabled + label:hover {
 
 .hotel-about {
   float:left;
-  width: 66.67%;
-  width: calc(100%/3*2);
+  width: 77%;
 }
 
 .hotel-about .hotel-photo {
@@ -478,7 +494,7 @@ input:disabled + label, input:disabled + label:hover {
 
 .hotel-description {
   float: left;
-  width: 270px;
+  width: 68%;
 }
 
 .hotel-name {
@@ -493,19 +509,18 @@ input:disabled + label, input:disabled + label:hover {
 
 .hotel-wrapper {
   float: left;
-  margin-right: 6px;
-  max-width: 143px;
-}
-
-.hotel-wrapper:last-child {
-  margin-right: 0;
+  max-width: 289px;
 }
 
 .hotel-wrapper p {
   margin-top: 0;
+  margin-right: 1px;
+  width: 111px;
   line-height: 21px;
   margin-bottom: 14px;
   word-break: break-all;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .hotel-info, .hotel-book {
@@ -520,16 +535,18 @@ input:disabled + label, input:disabled + label:hover {
 
 .hotel-info {
   background-color: #81b3d2;
+  max-width: 111px;
+  margin-right: 2px;
 }
 
 .hotel-book {
+  max-width: 145px;
   background-color: #766357;
 }
 
 .hotel-rate {
   float: right;
-  width: 33.33%;
-  width: calc(100%/3);
+  width: 150px;
   text-align: right;
 }
 
@@ -590,11 +607,14 @@ input:disabled + label, input:disabled + label:hover {
   vertical-align: top;
   width: 22.85%;
   font-size: 14px;
-  padding: 14px 0 15px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-right: 10px;
 }
 
-.header-menu li:nth-child(4n),
-.header-menu li:nth-child(5n) {
+.header-menu .menu-right {
+  padding-right: 0;
+  padding-left: 10px;
   text-align: right;
 }
 
@@ -635,7 +655,9 @@ input:disabled + label, input:disabled + label:hover {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .menu-logo img {
@@ -646,9 +668,9 @@ input:disabled + label, input:disabled + label:hover {
 .logo {
   min-height: 509px;
   padding-top: 77px;
-  background: url("../img/index/mask.png") no-repeat 0 100%,
-              url("../img/index/background-sedona-1200.jpg") no-repeat 0 21%, #557fa4;
-  background-size: 100% auto, auto;
+  background: url("../img/sedona-backgrounds/mask.png") no-repeat 0 100%,
+              url("../img/sedona-backgrounds/background-index.jpg") no-repeat center 21%, #557fa4;
+  background-size: 100% auto, cover;
 }
 
 .logo img {
@@ -725,13 +747,13 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .feature-item .feature-description {
-  padding-left: 15.5%;
-  padding-right: 15.5%;
+  width: 71.7%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.feature-item:first-child .feature-description {
-  padding-left: 14%;
-  padding-right: 14%;
+.feature-item:nth-child(2) .feature-description {
+  width: 76%;
 }
 
 .feature-image {
@@ -753,7 +775,9 @@ input:disabled + label, input:disabled + label:hover {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .advices {
@@ -781,8 +805,8 @@ input:disabled + label, input:disabled + label:hover {
 }
 
 .advice-item p {
-  padding-left: 49px;
-  padding-right: 49px;
+  padding-left: 47px;
+  padding-right: 47px;
   line-height: 21px;
 }
 
@@ -793,8 +817,10 @@ input:disabled + label, input:disabled + label:hover {
   position: absolute;
   top: 61px;
   left: 50%;
-  transform: translateX(-50%);
-  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -128px -17px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #ffffff url("../img/sedona-sprites/icon-sprite.png") no-repeat 0px 0px;
 }
 
 .advice-item.food::before {
@@ -804,8 +830,10 @@ input:disabled + label, input:disabled + label:hover {
   position: absolute;
   top: 60px;
   left: 50%;
-  transform: translateX(-50%);
-  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -532px -17px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #ffffff url("../img/sedona-sprites/icon-sprite.png") no-repeat 1px -121px;
 }
 
 .advice-item.gift::before {
@@ -815,8 +843,10 @@ input:disabled + label, input:disabled + label:hover {
   position: absolute;
   top: 56px;
   left: 50%;
-  transform: translateX(-50%);
-  background: #ffffff url("../img/index/advances-sprite.png") no-repeat -1005px -12px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #ffffff url("../img/sedona-sprites/icon-sprite.png") no-repeat 6px -235px;
 }
 
 .search-hotel {
@@ -864,6 +894,7 @@ input:disabled + label, input:disabled + label:hover {
 
 .input-wrapper .text-label {
   width:24.5%;
+  padding-right: 10px;
   text-align: left;
   cursor: pointer;
   padding-top: 6px;
@@ -883,7 +914,6 @@ input:disabled + label, input:disabled + label:hover {
   padding-right: 35px;
   font-size: 14px;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 .dates-and-people input:hover {
@@ -935,11 +965,13 @@ input:disabled + label, input:disabled + label:hover {
   width: 50%;
   padding-top: 6px;
   padding-bottom: 6px;
+  padding-right: 10px;
   text-align: left;
   word-break: break-all;
 }
 
 .text-label[for="children"] {
+  padding-left: 5px;
   padding-right: 26px;
   text-align: right;
 }
@@ -980,12 +1012,13 @@ input:disabled + label, input:disabled + label:hover {
 
 .map {
   min-height: 593px;
-  background: #e1e6cf url("../img/index/map.jpg");
+  background: #e1e6cf url("../img/sedona-backgrounds/map.jpg");
 }
 
 .footer {
   min-height: 120px;
   padding-top: 36px;
+  padding-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1044,7 +1077,7 @@ input:disabled + label, input:disabled + label:hover {
   display: inline-block;
   color: #000000;
   vertical-align: middle;
-  max-width: 270px;
+  max-width: 120px;
   margin-right: 3px;
   margin-top: 13px;
 }
@@ -1054,16 +1087,16 @@ input:disabled + label, input:disabled + label:hover {
   vertical-align: top;
   width: 113px;
   height: 39px;
-  background: #ffffff url("../img/logo/copyright-logo.png") no-repeat;
-  background-position: 0 0;
+  background: #ffffff url("../img/sedona-sprites/icon-sprite.png") no-repeat;
+  background-position: -159px -16px;
   margin-left: 5px;
   margin-top: 5px;
 }
 
 .btn:hover {
-  background-position: 0 -48px;
+  background-position: -159px -83px;
 }
 
 .btn:active {
-  background-position: 0 -96px;
+  background-position: -159px -153px;
 }
