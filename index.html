@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона | Главная</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -95,7 +95,7 @@
           <p>Укажите предполагаемые даты поездки, <br>
             и&nbsp;мы&nbsp;покажем Вам лучшие предложения гостиниц в&nbsp;Седоне</p>
           <a class="show-hotels brown-btn" href="hotels.html">Поиск гостиницы в Седоне</a>
-          <form class="dates-and-people" action="https://echo.htmlacademy.ru" method="post">
+          <form class="dates-and-people dates-and-people-disappearance" action="https://echo.htmlacademy.ru" method="post">
             <div class="input-wrapper">
               <label class="text-label" for="arrival">Дата заезда:</label>
               <div class="date-input">
@@ -132,7 +132,7 @@
             <button class="blue-btn" type="submit">Найти</button>
           </form>
         </div>
-        <section class="map">
+        <section class="map" id="map">
         </section>
       </main>
       <footer class="footer index clearfix">
@@ -156,5 +156,7 @@
         </section>
       </footer>
     </div>
+    <script src="js/modal-content-min.js"></script>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=qAhhwCewzAO0-L2y0Yn1TqmdTy7XmTzn&amp;height=593&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=map"></script>
   </body>
 </html>
