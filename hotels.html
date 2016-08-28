@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона | Поиск отеля</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
@@ -72,32 +72,31 @@
               </fieldset>
 
               <fieldset class="hotels-price clearfix">
-                <div class="fieldset-right clearfix">
-                  <legend>Стоимость в сутки (P):</legend>
-                  <div class="content-right">
-                    <div class="price-controls">
-                      <div class="half-width-price">
-                        <label class="min-price" for="min-price">От</label>
-                        <input type="text" name="min-price" id="min-price" value="0">
-                      </div>
-
-                      <div class="half-width-price">
-                        <label class="max-price" for="max-price">До</label>
-                        <input type="text" name="max-price" id="max-price" value="3000">
-                      </div>
+                <legend>Стоимость в сутки (P):</legend>
+                <div class="content-right">
+                  <div class="price-controls">
+                    <div class="half-width-price">
+                      <label class="min-price" for="min-price">От</label>
+                      <input type="text" name="min-price" id="min-price" value="0">
                     </div>
 
-                    <div class="range-controls">
-                      <div class="scale">
-                        <div class="bar"></div>
-                      </div>
-                      <div class="range-toggle range-toggle-min"></div>
-                      <div class="range-toggle range-toggle-max"></div>
+                    <div class="half-width-price">
+                      <label class="max-price" for="max-price">До</label>
+                      <input type="text" name="max-price" id="max-price" value="3000">
                     </div>
-
                   </div>
-                  <button class="btn-transparent" type="submit">Показать</button>
+
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <div class="range-toggle range-toggle-min"></div>
+                    <div class="range-toggle range-toggle-max"></div>
+                  </div>
+
                 </div>
+                <button class="btn-transparent" type="submit">Показать</button>
+
               </fieldset>
             </form>
           </div>
